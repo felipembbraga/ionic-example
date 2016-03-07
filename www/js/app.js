@@ -8,11 +8,7 @@
 angular.module('app', [
   'ionic',
   'ngCordova',
-  'firebase',
-  'app.controllers',
-  'app.routes',
-  'app.services',
-  'app.directives'
+  'firebase'
 ])
 
 .run(function($ionicPlatform, $cordovaSplashscreen, $timeout) {

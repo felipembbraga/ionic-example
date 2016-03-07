@@ -1,4 +1,4 @@
-angular.module('app.routes', [])
+angular.module('app')
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -7,43 +7,43 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
-  
 
-      .state('menu.cartRioIdeal', {
+
+
+  .state('menu.home', {
     url: '/home',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/cartRioIdeal.html',
-        controller: 'cartRioIdealCtrl'
+        controller: 'homeCtrl'
       }
     }
   })
 
-  .state('menu.solicitaEs', {
+  .state('menu.solicitations', {
     url: '/solicitations',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/solicitaEs.html',
-        controller: 'solicitaEsCtrl'
+        controller: 'solicitationCtrl'
       }
     }
   })
 
-  .state('menu.serviOs', {
+  .state('menu.services', {
     url: '/services',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/serviOs.html',
-        controller: 'serviOsCtrl'
+        controller: 'serviceCtrl'
       }
     }
   })
 
   .state('menu', {
-    url: '/side-menu21',
+    url: '/side-menu',
     templateUrl: 'templates/menu.html',
-    abstract:true
+    abstract: true
   })
 
   .state('login', {
@@ -52,34 +52,34 @@ angular.module('app.routes', [])
     controller: 'loginCtrl'
   })
 
-  .state('registrar', {
+  .state('register', {
     url: '/signup',
     templateUrl: 'templates/registrar.html',
-    controller: 'registrarCtrl'
+    controller: 'registerCtrl'
   })
 
-  .state('menu.tirarDVidas', {
+  .state('menu.doubts', {
     url: '/doubts',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/tirarDVidas.html',
-        controller: 'tirarDVidasCtrl'
+        controller: 'doubtsCtrl'
       }
     }
   })
 
-  .state('menu.acompanhamento', {
+  .state('menu.trackSolicitation', {
     url: '/solicitation/:id',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/acompanhamento.html',
-        controller: 'acompanhamentoCtrl'
+        controller: 'trackSolicitationCtrl'
       }
     }
   })
 
-$urlRouterProvider.otherwise('/login')
+  $urlRouterProvider.otherwise('/login')
 
-  
+
 
 });
